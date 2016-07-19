@@ -35,8 +35,8 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_login);
-        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);*/
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         auth = FirebaseAuth.getInstance();
 
@@ -58,6 +58,8 @@ public class LoginActivity extends AppCompatActivity {
         btnResetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, ResetPasswordActivity.class));
+                finish();
 
             }
         });
@@ -97,9 +99,5 @@ public class LoginActivity extends AppCompatActivity {
                         });
             }
         });
-
-
-
-
     }
 }

@@ -28,7 +28,6 @@ public class SignupActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        getSupportActionBar().hide();
 
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
@@ -50,6 +49,7 @@ public class SignupActivity extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(SignupActivity.this, LoginActivity.class));
                 finish();
             }
         });
