@@ -4,6 +4,10 @@
     <color name="colorPrimaryDark">#078B9A</color>
     <color name="colorAccent">#FFA903</color>
 
+    <color name="viewBg">#f1f5f8</color>
+    <color name="album_title">#4c4c4c</color>
+
+
     <color name="bg_login">#F6A200</color>
     <color name="bg_register">#2e3237</color>
     <color name="bg_main">#428bca</color>
