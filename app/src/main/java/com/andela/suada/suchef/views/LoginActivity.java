@@ -11,8 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
-import com.andela.suada.suchef.MainActivity;
 import com.andela.suada.suchef.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -30,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         auth = FirebaseAuth.getInstance();
         if (auth.getCurrentUser() != null){
-            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            startActivity(new Intent(LoginActivity.this, CategoryListActivity.class));
             finish();
         }
 
@@ -91,7 +89,7 @@ public class LoginActivity extends AppCompatActivity {
                                         Toast.makeText(getApplicationContext(), R.string.auth_failed, Toast.LENGTH_LONG).show();
                                     }
                                 } else {
-                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                    Intent intent = new Intent(LoginActivity.this, CategoryListActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }
